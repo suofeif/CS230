@@ -131,7 +131,7 @@ def loopone(i):
 		y_true_label = convert_oh_to_cls_name(y_true)
 		#print(y_pred_label)
 		#print(y_true_label)
-		f1score = f1_score(y_true_label, y_pred_label, average=None)
+		f1score = f1_score(y_true_label, y_pred_label, average='weighted')
 		f1_ave = np.average(f1score)
 		return f1_ave
 	logger.info("start train column" +str(i))
